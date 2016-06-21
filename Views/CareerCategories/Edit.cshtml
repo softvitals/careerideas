@@ -1,0 +1,51 @@
+﻿@model CareerIdeas.Models.CareerCategory
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="reg">
+    <h2>Edit Category</h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="reg">
+            <h4>CareerCategory</h4>
+        </div>
+        <hr />
+        
+        <div class="form-group">
+            <div style="color:LightSeaGreen; font: 250% 'Jenna Sue', arial, sans-serif;">
+
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="aboutpl">
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+            <li> @Html.ActionLink("Back to List", "Index")</li>
+        </ul>
+    </div>
+</div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

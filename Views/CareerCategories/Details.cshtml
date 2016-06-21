@@ -1,0 +1,37 @@
+﻿@model CareerIdeas.Models.CareerCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="reg">
+    <h2>Details Of Category</h2>
+</div>
+
+<div>
+    <div class="reg">
+        <h4>CareerCategory</h4>
+    </div>
+    <hr />
+    <dl class="dl-horizontal" >
+        <dt style="color:lightcoral; font-size:20px;">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd style="color:#8bae32 ; font-size:20px;" >
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<div class="aboutpl">
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+            
+            <li>@Html.ActionLink("Edit", "Edit", new { id = Model.Id })</li>
+            <li>   @Html.ActionLink("Back to List", "Index")</li>
+            </ul>
+        </div>
+    </div>
+            

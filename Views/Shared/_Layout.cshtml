@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MY CAREER IDEAS APP</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+    
+
+
+
+
+</script>
+    </head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Career-Ideas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Career Catagory", "Index", "CareerCategories")</li>
+                    <li>@Html.ActionLink("Career Ideas", "Index", "CareerIdeas")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <!-- BEGIN PRE-FOOTER -->
+            <div class="pre-footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- BEGIN BOTTOM ABOUT BLOCK -->
+                        <div class="col-md-8 col-sm-6 pre-footer-col">
+                            <h2 style="font-style:oblique">Why Career-Ideas</h2>
+                            <p>Having a career path is like having a professional insurance policy. With a career path you will probably:
+        <ul>
+        <li>Have a broader skill base</li>
+        <li>Make logical job transitions</li>
+        <li>Have increasing responsibility</li>
+        <li>Have a broader prospective</li>
+        <li>Make decisions easier</li>
+        <li>Earn more and Be more satisfied</li>
+        </ul></p>
+
+    <h2 style="font-style:oblique">Career Ideas continuse..</h2>
+    <p>Career Ideas have been providing quality credit ideas to its valued users and continues its job keeping close eye on the developments regarding student future.</p>
+
+    <div class="photo-stream">
+        <h2 style="font-style:oblique">CareerIdeas</h2>
+        <ul class="list-unstyled">
+            <li><a href="javascript:;"><img alt="" src="/images/ps1.jpg"></a></li>
+            <li><a href="javascript:;"><img alt="" src="/images/ps2.jpg"></a></li>
+            <li><a href="javascript:;"><img alt="" src="/images/ps3.jpg"></a></li>
+            <li><a href="javascript:;"><img alt="" src="/images/ps4.jpg"></a></li>
+            <li><a href="javascript:;"><img alt="" src="/images/ps5.jpg"></a></li>
+            <li><a href="javascript:;"><img alt="" src="/images/ps6.jpg"></a></li>
+
+        </ul>
+    </div>
+</div>
+<!-- END BOTTOM ABOUT BLOCK -->
+<!-- BEGIN BOTTOM CONTACTS -->
+<div class="col-md-4 col-sm-6 pre-footer-col">
+    <h2>Our Contacts</h2>
+    <address class="margin-bottom-40">
+        <span class="fa fa-location-arrow">
+            Office No. E55G-26, PO Box 50592,<br>
+            Hamriyah Free Zone, Sharjah, UAE
+        </span><br>
+        <span class="fa fa-phone-square"> Phone: +971 555 922 156</span><br>
+        <span class="fa fa-internet-explorer"> Email: <a href="mailto:info@CareerIdeas.com">info@CareerIdeas.com</a></span><br>
+        <span class="fa fa-skype"> Skype: <a href="skype:CareerIdeas">CareerIdeas</a></span>
+    </address>
+    <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
+        <h2>Newsletter</h2>
+        <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+        <form action="#">
+            <div class="input-group">
+                <input type="text" placeholder="youremail@mail.com" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END BOTTOM CONTACTS -->
+
+</div>
+</div>
+</div>
+<!-- END PRE-FOOTER -->
+<!-- BEGIN FOOTER -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- BEGIN COPYRIGHT -->
+            <div class="col-md-5 col-sm-6 padding-top-10" style="color:LightGreen">
+                © copyright 2015 CareerIdeas. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a> | <a href="javascript:;">Terms of Service</a>
+            </div>
+            <!-- END COPYRIGHT -->
+            <!-- BEGIN PAYMENTS -->
+            <div class="col-md-6 col-sm-6">
+                <ul class="social-footer list-unstyled list-inline pull-right">
+                    <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-skype"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-github"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-dropbox"></i></a></li>
+                </ul>
+                <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 10px; right: 10px; opacity: 1; cursor:default;"><img src="/Images/up.png" style="width:40px; height:40px"></div>
+            </div>
+            <!-- END PAYMENTS -->
+        </div>
+    </div>
+</div>
+<!-- END FOOTER -->
+</footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>

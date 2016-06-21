@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CareerIdeas.Models.CareerCategory>
+
+<br/>
+<div class="about">
+    <h1>Career Categories</h1>
+</div>
+
+<script>
+    $(document).ready(function () {
+        
+        $(".delbutton").click(function () {
+            
+            
+            var element = $(this);
+
+            //Find the id of the link that was clicked
+            var del_id = element.attr("id");
+            var info = { "id": del_id };
+            //Built a url to send
+            
+            var urlTo = '/CareerCategories/AjaxExample?id=' + del_id;
+            $.ajax({
+                
+                url: urlTo,
+
+                success: function (data)
+                {
+                    alert(data);
+                   
+                },
+
+                failure: function () {
+                    alert("insufficient privileges");
+                }
+                
+
+            });
+            //var access = document.getElementById("privilage").value;
+            //if(access == 2){
+
+                $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
+            .animate({ opacity: "hide" }, "slow");
+            //}
+           
+
+            
+
+        });
+
+    });
+
+</script>
+
+<p>
+    @Html.ActionLink("Add a new Catogory", "Create", "CareerCategories", new { @class="career"})
+</p>
+<table class="table">
+    <tr>
+        <th class="tab">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+    </tr>
+    
+    <input type="hidden" id="privilage" value="1" />
+@foreach (var item in Model) {
+    <tr class="record">
+        <td class="cat">
+            <a style="text-decoration:none" href="@Url.Action("Category" ,"CareerIdeas", new { id=item.Id,catname=item.Name}) ">@Html.DisplayFor(modelItem => item.Name)</a>
+         </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class="category"}) 
+            @Html.ActionLink("Details", "Details", new { id=item.Id} , new { @class="category"}) 
+            <input type="button" id="@item.Id"  class="delbutton category" value="Delete" />
+           </td>
+    </tr>
+}
+    
+</table>
